@@ -10,8 +10,12 @@
   </head>
 
   <body>
-    <div>This is a div</div>
-    <%= yield %>
-    <span>This is a span</span>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= link_to image_tag("kitten.jpg", alt: "Cute Kitten"),
+                  'http://cdn.learnenough.com/' %>
+    </div>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
